@@ -1,0 +1,16 @@
+/* Keep nbsphinx image outputs proportional when the theme constrains width. */
+.rst-content div.nboutput.container div.output_area img,
+.rst-content .nboutput img {
+    max-width: 100%;
+    height: auto !important;
+    object-fit: contain;
+}
+
+.rst-content div.nboutput.container div.output_area {
+    overflow-x: auto;
+}
+
+/* Give wide notebook plots more room on desktop while staying responsive. */
+.wy-nav-content {
+    max-width: 1200px;
+}

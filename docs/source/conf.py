@@ -55,5 +55,22 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_css_files = ['custom.css']
+
+# The notebooks are pre-rendered locally; Read the Docs only converts the
+# saved outputs to HTML. Plotly outputs in the notebooks call require(["plotly"]),
+# so this maps that module name to Plotly's CDN bundle.
 nbsphinx_execute = 'never'
 nbsphinx_allow_errors = False
+nbsphinx_prolog = r'''
+.. raw:: html
+
+   <script type="text/javascript">
+   if (window.require) {
+       require.config({
+           paths: {
+               plotly: "https://cdn.plot.ly/plotly-2.35.2.min"
+           }
+       });
+   }
+   </script>
+'''

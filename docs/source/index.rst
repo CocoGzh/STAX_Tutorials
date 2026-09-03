@@ -76,3 +76,6 @@ Clone the repository.
 Citation
 ========
 Multi-task spatial omics analytics for high-precision modeling of tissue architecture with STAX
+github:
+https://github.com/zhanglabtools/STAX
+https://github.com/CocoGzh/STAX
